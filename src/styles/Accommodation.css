@@ -48,6 +48,11 @@
     white-space: normal;
 }
 
+.dollar-sign {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
 .accommodation-price {
     margin-bottom: -4px;
 }
