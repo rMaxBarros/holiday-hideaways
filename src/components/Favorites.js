@@ -31,17 +31,22 @@ function Favorites() {
 
     return (
         <div className="favorites-container">
-            <h1>Acomodações Favoritas</h1>
+            <h2 className='favorites-page-title'>Acomodações Favoritas</h2>
             <div className="favorites-grid">
                 {favoriteAccommodations.length > 0 ? (
                     favoriteAccommodations.map((accommodation) => (
-                        <div key={accommodation.id} className="favorite-card">
-                            <Accommodation accommodation={accommodation} /> {/* Function to remove from favorites */}
-                            <button className="remove-favorite-button" onClick={() => handleRemoveFavorite(accommodation.id)}>Remover</button>
+                        <div className="favorite-cards-container">
+                            <div key={accommodation.id} className="favorite-card">
+                                <Accommodation accommodation={accommodation} />
+                                {/* Function to remove from favorites */}
+                                <button className="remove-favorite-button" onClick={() => handleRemoveFavorite(accommodation.id)}>
+                                    <img className='trash-icon' src="../images/trash-icon.svg" alt="" />
+                                </button>
+                            </div>
                         </div>
                     ))
                 ) : (
-                    <p>A lista de favoritos está vazia!</p>
+                    <p className='empty-list-text'>A lista de favoritos está vazia!</p>
                 )}
             </div>
         </div>

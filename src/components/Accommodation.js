@@ -12,7 +12,7 @@ function Accommodation({ accommodation }) {
 
     const handleFavorite = () => {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-        const updateFavorites = isFavorite 
+        const updateFavorites = isFavorite
             ? favorites.filter(favoriteId => favoriteId !== accommodation.id) // Remove from favorites
             : [...favorites, accommodation.id]; // Add to favorites
 
@@ -22,22 +22,42 @@ function Accommodation({ accommodation }) {
 
     return (
         <>
+
             <div className="card">
-                <img src={accommodation.image} alt={accommodation.name} className='accommodation-image' />
-                <div className='accommodation-info'>
-                    <div className='card-texts'>
-                        <h3 className='accommodation-name'>{accommodation.name}</h3>
-                        <p className='accommodation-price'><span className='dollar-sign'>R$</span>{accommodation.accommodation_price}</p>
-                        <p className='accommodation-address'>{accommodation.address}, {accommodation.city}</p>
+
+                <div className='accommodation-card-container'>
+                    <div className='card-title-container'>
+                        <h3 className='accommodation-title'>{accommodation.name}</h3>
                     </div>
 
-                    <div className='card-buttons'>
-                        <button className='about-button'>Saiba mais</button>
-                        <button className={`favorite-button ${isFavorite ? 'favorited' : ''}`} onClick={handleFavorite}>
-                            <img src="../../images/start-icon.svg" alt="" />
-                        </button>
+                    <img
+                        src={accommodation.image}
+                        alt={accommodation.name}
+                        className='accommodation-image'
+                    />
+
+                    <div className='accommodation-info-container'>
+                        <div className='address-info'>
+                            <img className='loc-icon' src="../../images/location-icon.svg" alt="" />
+                            <p className='accommodation-address'>{accommodation.address}, {accommodation.city}</p>
+                        </div>
+
+                        <div className='price-info'>
+                            <img className='dollar-sign' src="../../images/dollar-sign.svg" alt="" />
+                            <p className='accommodation-price'>{accommodation.accommodation_price}</p>
+                        </div>
+
+                        <div className='card-buttons'>
+                            <button className={`favorite-button ${isFavorite ? 'favorited' : 'not-favorited'}`}
+                                onClick={handleFavorite}>
+                                <img src="../../images/start-icon.svg" alt="" />
+                            </button>
+                            <button className='about-button'>Saiba mais</button>
+                        </div>
                     </div>
+
                 </div>
+
             </div>
         </>
     )

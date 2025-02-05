@@ -33,9 +33,8 @@ function AccommodationsList() {
 
     return (
         <div className='main-container'>
-            <h1 className='title'>Encontre aqui o próximo lugar para passar suas férias!</h1>
+            <h1 className='title'>Digite a cidade do seu próximo destino:</h1>
             <div className='search-container'>
-                <a href="/" className='home-button'><img src='../../images/home-icon.svg' alt=''></img></a>
                 <input
                     type="text"
                     placeholder='Filtrar por cidade'
@@ -47,7 +46,7 @@ function AccommodationsList() {
             </div>
             <div className='cards-container'>
                 {loadingAccomodations ? (
-                    <p>Encontre o melhor lugar para as suas férias.</p>
+                    <p></p>
                 ) : (
                     accommodations.map((accomodation) => (
                         <Accommodation key={accomodation.id} accommodation={accomodation} />

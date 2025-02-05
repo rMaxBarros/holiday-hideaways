@@ -1,59 +1,54 @@
 .main-container {
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 1.9rem;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.main-container .title {
+    color: var(--dark-blue-color);
+    font-size: 2.3rem;
+}
+
 .search-container {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin-bottom: 20px;
-}
-
-.home-button {
-    margin-right: 6px;
-}
-
-.home-button img {
-    height: 30px;
-    width: 30px;
-    transition: fill 0.3s ease;
-}
-
-.home-button img:hover {
-    filter: invert(24%) sepia(100%) saturate(4870%) hue-rotate(201deg) brightness(99%) contrast(106%);
 }
 
 .search-field {
     flex-grow: 1;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0.1rem solid var(--dark-blue-color);
+    padding: 0.9rem;
     margin-right: 10px;
+
+    text-align: center;
+    color: var(--dark-blue-color);
 }
 
 input:focus {
-    outline-color: rgb(29, 115, 221);
+    outline-color: var(--background-blue);
   }
 
 .search-button {
-    padding: 10px 20px;
-    background-color: rgb(29, 115, 221);
-    border-color: rgb(29, 115, 221);
-    color: #fff;
-    border-radius: 5px;
+    background-color: var(--dark-blue-color);
+    color: white;
+    font-size: 1rem;
+    padding: 0.9rem;
+    padding-inline: 2rem;
+    border: none;
+    font-family: var(--project-font);
+    transition: 0.9s ease;
     cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: black;
+    background-color: #436e8d;
+    color: var(--background-blue);
 }
 
 .cards-container {

@@ -1,0 +1,96 @@
+.cards-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-footer {
+    background-color: var(--dark-blue-color);
+    color: var(--gray-color);
+    margin-bottom: -1rem;
+    height: 40vh;
+}
+
+.container-footer h5 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.footer-about h5 {
+    margin-bottom: -.3rem;
+}
+
+.navigation-access h5,
+.social-media h5 {
+    margin-bottom: 1rem;
+}
+
+.footer-location-image, 
+.footer-phone-image,
+.footer-email-image {
+    width: 1rem;
+}
+
+.footer-locations-names {
+    display: flex;
+    flex-direction: column;
+}
+
+.loc-sj {
+    margin-top: -.9rem;
+}
+
+.footer-locations,
+.footer-phone,
+.footer-email {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.navigation-access a,
+.social-media a {
+    text-decoration: none;
+    color: var(--gray-color);
+}
+
+.footer-navigation,
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+}
+
+.copyright {
+    padding-inline: 9.9rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1025px) {
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 431px) {
+    .container-footer {
+        padding: .6rem;
+    }
+
+    .cards-footer {
+        flex-direction: column;
+    }
+
+    .navigation-access {
+        width: 100%;
+    }
+
+    .container-footer {
+        margin-bottom: -1rem;
+        height: 76vh;
+    }
+}

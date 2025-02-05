@@ -1,0 +1,47 @@
+.favorites-container {
+    background-color: var(--background-blue);
+    margin-top: -27px;
+    height: 100vh;
+}
+
+.favorites-page-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--dark-blue-color);
+}
+
+.empty-list-text {
+    display: flex;
+    font-size: 1.3rem;
+    padding: 2rem;
+    color: var(--dark-blue-color);
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.favorites-grid {
+    display: flex;
+    padding-inline: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 9rem;
+    overflow: scroll;
+    scrollbar-color: var(--dark-blue-color) var(--background-blue);
+    overflow-y: hidden;
+}
+
+.favorite-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.remove-favorite-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.trash-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    filter: invert(0%) sepia(0%) saturate(0%) brightness(0%) contrast(100%);
+}
