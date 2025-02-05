@@ -1,70 +1,43 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Holiday Hideaways
 
-## Available Scripts
+Este projeto consistiu na criação de um sistema completo para locação de temporada, abrangendo desde o desenvolvimento da API REST em Python até a construção do front-end interativo em React.
 
-In the project directory, you can run:
+### Protópipo do Figma:
 
-### `yarn start`
+![image](https://github.com/user-attachments/assets/5d26fb6c-3939-4b81-9df3-e5d1ea445e56)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Back-end (API REST com Python)
 
-### `yarn test`
+- Linguagem: Python
+- Framework: Flask
+- Biblioteca para CORS: Flask-CORS (para permitir requisições de diferentes origens)
+- Formato de dados: JSON (para troca de informações entre o back-end e o front-end).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A API foi responsável por fornecer os dados das acomodações, incluindo nome, imagem, preço, endereço e cidade. Os dados foram armazenados em um arquivo JSON, facilitando a manipulação e o acesso. A API também implementou endpoints para listar todas as acomodações, buscar acomodações por ID e filtrar acomodações por cidade.
 
-### `yarn build`
+## Front-end (Interface Interativa com React)
+- Biblioteca: React
+- Gerenciador de pacotes: npm
+- Biblioteca para requisições HTTP: Axios
+### Design:
+- Layout responsivo, adaptando-se a diferentes tamanhos de tela
+- Componentes reutilizáveis para os cards das acomodações
+- Estilos CSS personalizados para garantir uma aparência atraente e profissional.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O front-end consumiu os dados da API para exibir as acomodações em cards, permitindo que os usuários visualizassem as informações de forma clara e organizada. Foi implementada a funcionalidade de favoritar acomodações, com os favoritos sendo armazenados no LocalStorage do navegador. Além disso, foi criada uma página de favoritos para listar as acomodações favoritadas, com a opção de removê-las da lista.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Conexão Front-end e Back-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A conexão entre o front-end e o back-end foi estabelecida através de requisições HTTP. O front-end (React) enviava requisições para a API (Flask) para obter os dados das acomodações. O proxy foi configurado no front-end para redirecionar as requisições para o servidor da API durante o desenvolvimento.
 
-### `yarn eject`
+# Funcionalidades personalizadas
+- Listagem de acomodações: Exibição de todas as acomodações disponíveis em cards.
+- Busca por cidade: Filtro de acomodações com base na cidade.
+- Detalhes da acomodação: (Não implementado neste projeto, mas pode ser adicionado)
+- Favoritar acomodações: Adicionar e remover acomodações da lista de favoritos.
+- Página de favoritos: Exibição das acomodações favoritas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Considerações finais
+Este projeto demonstra a criação de um sistema web completo, desde a API até a interface do usuário, utilizando tecnologias modernas e eficientes. O design responsivo garante que a aplicação funcione corretamente em diferentes dispositivos, proporcionando uma boa experiência para o usuário. A implementação da funcionalidade de favoritar acomodações e a página de favoritos adicionam valor ao sistema, tornando-o mais útil e personalizado.
